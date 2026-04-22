@@ -732,32 +732,37 @@ function buildServicePage(key) {
       <h2>30 minutes.<br><em>No pitch deck.</em></h2>
       <p>We'll audit your setup, spot the fastest leverage points, and tell you honestly if we're the right fit.</p>
       <div class="cd">
-        <div class="cd-i"><div class="lbl2">Email</div><div class="val2">hello@marinai.com</div></div>
+        <div class="cd-i"><div class="lbl2">Email</div><div class="val2">makatzrina@gmail.com</div></div>
         <div class="cd-i"><div class="lbl2">Response time</div><div class="val2">Within 24 hours</div></div>
         <div class="cd-i"><div class="lbl2">Location</div><div class="val2">Remote-first, global clients</div></div>
       </div>
-      <button class="btn-p" onclick="window.location='mailto:hello@marinai.com'">Send an email →</button>
+      <button class="btn-p" onclick="window.location='mailto:makatzrina@gmail.com'">Send an email →</button>
     </div>
     <div class="contact-r r">
       <h3>Send a message</h3>
-      <div class="form-row">
-        <div class="field"><label>Name</label><input type="text" placeholder="Your name"></div>
-        <div class="field"><label>Company</label><input type="text" placeholder="Company name"></div>
-      </div>
-      <div class="field"><label>Email</label><input type="email" placeholder="your@email.com"></div>
-      <div class="field"><label>What do you need?</label>
-        <select>
-          <option value="" disabled selected>Select a service...</option>
-          <option>Strategy & Consulting</option><option>Growth Hacking</option>
-          <option>Paid Campaigns</option><option>Creative & Content</option>
-          <option>Social Media</option><option>AEO</option><option>SEO</option>
-          <option>Analytics & Attribution</option><option>Marketing Automation</option>
-          <option>Custom AI Tools</option><option>Full-stack partnership</option>
-          <option>Not sure yet</option>
-        </select>
-      </div>
-      <div class="field"><label>Message</label><textarea placeholder="Where are you now and what are you trying to achieve?"></textarea></div>
-      <button class="btn-p" style="width:100%" onclick="this.textContent='Sent ✓';this.style.opacity='.6';this.disabled=true">Send message →</button>
+      <form action="https://formsubmit.co/makatzrina@gmail.com" method="POST" style="display:contents">
+        <input type="hidden" name="_subject" value="New inquiry — MarinAi website">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://www.marinai.xyz?sent=1">
+        <div class="form-row">
+          <div class="field"><label>Name</label><input type="text" name="name" placeholder="Your name" required></div>
+          <div class="field"><label>Company</label><input type="text" name="company" placeholder="Company name"></div>
+        </div>
+        <div class="field"><label>Email</label><input type="email" name="email" placeholder="your@email.com" required></div>
+        <div class="field"><label>What do you need?</label>
+          <select name="service">
+            <option value="" disabled selected>Select a service...</option>
+            <option>Strategy & Consulting</option><option>Growth Hacking</option>
+            <option>Paid Campaigns</option><option>Creative & Content</option>
+            <option>Social Media</option><option>AEO</option><option>SEO</option>
+            <option>Analytics & Attribution</option><option>Marketing Automation</option>
+            <option>Custom AI Tools</option><option>Full-stack partnership</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="field"><label>Message</label><textarea name="message" placeholder="Where are you now and what are you trying to achieve?"></textarea></div>
+        <button type="submit" class="btn-p" style="width:100%">Send message →</button>
+      </form>
     </div>
   </div>
   <footer><span>© 2026 MarinAI</span><div class="fl"><button onclick="go('home')">Home</button><button onclick="go('services')">Services</button><button onclick="go('about')">About</button></div></footer>
