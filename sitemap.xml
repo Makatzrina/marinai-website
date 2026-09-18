@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://marinai.xyz/</loc>
-    <lastmod>2026-04-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <url><loc>https://marinai.xyz/</loc></url>
+  <url><loc>https://marinai.xyz/ai-marketing-strategy/</loc></url>
+  <url><loc>https://marinai.xyz/ai-search-visibility/</loc></url>
+  <url><loc>https://marinai.xyz/marketing-ai-workflows/</loc></url>
+  <url><loc>https://marinai.xyz/marketing-ai-advisory/</loc></url>
+  <url><loc>https://marinai.xyz/privacy/</loc></url>
+  <url><loc>https://marinai.xyz/commex/</loc></url>
 </urlset>
