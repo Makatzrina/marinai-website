@@ -1,0 +1,23 @@
+# MarinAI
+
+> MarinAI is the independent marketing consultancy of Marina Katz-Goldenberg, a marketing and AI consultant running a Portugal-registered business and working remotely. MarinAI helps businesses with marketing strategy, practical AI adoption, search visibility (SEO, GEO, AEO), AI marketing workflows, team enablement, and full-service influencer launches on X (Twitter).
+
+Contact: marketing@marinai.xyz. No payments are taken through the website; scope and fees are agreed before work starts.
+
+## Services
+
+- [X influencer launch](https://marinai.xyz/x-influencer-launch/): Full-service launches on X run like an influencer agency. Influencer side: finding and vetting relevant influencers, writing their briefs, handling contracts, scheduling and payments. Company side: finding the key messages, writing the launch video script and creating the video. After launch: reporting and analysis for the next launch. Influencer fees depend on who is booked and usually run from $5,000 to $30,000 per launch; MarinAI services are priced per item. Every paid post is disclosed. The page has a price estimate calculator; the next step is to book a call.
+- [Marketing strategy & AI adoption](https://marinai.xyz/ai-marketing-strategy/): Readiness audit, prioritised AI use cases and a practical marketing roadmap.
+- [AI search visibility: SEO, GEO & AEO](https://marinai.xyz/ai-search-visibility/): Making a business easier to discover, understand and reference in search results and AI-generated answers.
+- [AI marketing workflows & automation](https://marinai.xyz/marketing-ai-workflows/): Workflow mapping, tool evaluation and focused pilots with human review.
+- [Marketing AI advisory & team enablement](https://marinai.xyz/marketing-ai-advisory/): Role-specific working sessions and ongoing strategic guidance.
+
+## About
+
+- [About Marina Katz-Goldenberg](https://marinai.xyz/#about): Marketing and AI consultant behind MarinAI.
+- [LinkedIn](https://www.linkedin.com/in/marina-katz-goldenberg-22553a47/)
+
+## Optional
+
+- [Commex](https://marinai.xyz/commex/): An interactive product preview by MarinAI for discovering relevant conversations on X. Live discovery, payments and publishing are not enabled.
+- [Privacy](https://marinai.xyz/privacy/)
