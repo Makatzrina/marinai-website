@@ -1,4 +1,5 @@
 /* X influencer launch page: a bold dark variant of the MarinAI identity (electric-blue glow, coral tape, terminal and receipt details). Scoped to body.x-launch. */
+.x-launch main{overflow-x:clip}
 .x-launch{--bg:#090a12;--panel:#10121d;--panel-2:#151829;--edge:#262a44;--text:#eef0fb;--soft:#a9adc6;--electric:#4f6cff;--glow:#5b78ff;--mono:ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;background:var(--bg);color:var(--text)}
 .x-launch ::selection{background:var(--coral);color:#111}
 .x-launch a:focus-visible,.x-launch button:focus-visible,.x-launch summary:focus-visible,.x-launch input:focus-visible{outline:3px solid var(--glow);outline-offset:4px}
@@ -23,7 +24,7 @@
 
 /* Hero */
 .xl-hero{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center;padding-block:56px 84px;position:relative}
-.xl-hero:before{content:'';position:absolute;inset:-60px -10% auto auto;width:560px;height:560px;background:radial-gradient(circle,#304ee840 0%,#304ee800 65%);pointer-events:none;z-index:-1}
+.xl-hero:before{content:'';position:absolute;inset:-60px 0 auto auto;width:560px;height:560px;background:radial-gradient(circle,#304ee840 0%,#304ee800 65%);pointer-events:none;z-index:-1}
 .xl-kicker{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;letter-spacing:1.4px;color:var(--soft)}
 .xl-pulse{width:8px;height:8px;border-radius:50%;background:var(--coral);box-shadow:0 0 0 0 #ff775999;animation:xl-pulse 2s infinite}
 .xl-hero h1{font-size:clamp(46px,6vw,86px);line-height:1;letter-spacing:-3.6px;margin-top:26px}
