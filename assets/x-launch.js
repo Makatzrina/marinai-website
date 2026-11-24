@@ -1,12 +1,10 @@
-// X launch page: progressive enhancement only. The page, prices and links all work without JavaScript.
+// X launch page: progressive enhancement only. The page and its links work without JavaScript.
 (() => {
   // BOOKING LINK: paste Marina's booking page here (for example a Calendly or Cal.com link).
-  // While it is empty, every "Book a call" button opens an email to Marina instead.
+  // While it is empty, every "Book a call" button opens an email to Marina instead,
+  // with the visitor's checklist answers filled in.
   const BOOKING_URL = '';
   const EMAIL = 'marketing@marinai.xyz';
-
-  const form = document.querySelector('.xl-calc');
-  const money = n => '$' + Math.round(n).toLocaleString('en-US');
 
   if (BOOKING_URL) {
     document.querySelectorAll('[data-book]').forEach(a => {
@@ -16,61 +14,54 @@
     });
   }
 
+  const form = document.querySelector('.xl-calc');
   if (!form) return;
   const boxes = [...form.querySelectorAll('input[name="service"]')];
-  const range = form.querySelector('#xl-budget');
-  const out = form.querySelector('#xl-budget-out');
   const lines = form.querySelector('#xl-lines');
-  const servicesTotal = form.querySelector('#xl-services-total');
-  const influencerTotal = form.querySelector('#xl-influencer-total');
-  const total = form.querySelector('#xl-total');
+  const budgetOut = form.querySelector('#xl-budget-out');
+  const timingOut = form.querySelector('#xl-timing-out');
   const cta = form.querySelector('#xl-receipt-cta');
 
   const nameOf = box => box.closest('label').querySelector('strong').textContent.trim();
+  const picked = name => form.querySelector(`input[name="${name}"]:checked`)?.value || 'Not sure yet';
 
   const render = () => {
-    const picked = boxes.filter(b => b.checked);
-    const services = picked.reduce((sum, b) => sum + Number(b.dataset.price || 0), 0);
-    const budget = Number(range.value);
+    const chosen = boxes.filter(b => b.checked);
+    const budget = picked('budget');
+    const timing = picked('timing');
 
-    lines.replaceChildren(...(picked.length ? picked.map(b => {
+    lines.replaceChildren(...(chosen.length ? chosen.map(b => {
       const li = document.createElement('li');
       const label = document.createElement('span');
-      const price = document.createElement('span');
+      const mark = document.createElement('span');
       label.textContent = nameOf(b);
-      price.textContent = money(Number(b.dataset.price || 0));
-      li.append(label, price);
+      mark.textContent = '✓';
+      li.append(label, mark);
       return li;
-    }) : [Object.assign(document.createElement('li'), { className: 'xl-empty', textContent: 'No services selected yet.' })]));
+    }) : [Object.assign(document.createElement('li'), { className: 'xl-empty', textContent: 'Nothing ticked yet. That’s fine, we’ll work it out on the call.' })]));
 
-    out.value = money(budget);
-    out.textContent = money(budget);
-    servicesTotal.textContent = money(services);
-    influencerTotal.textContent = money(budget);
-    total.textContent = money(services + budget);
-    range.style.setProperty('--fill', ((budget - range.min) / (range.max - range.min) * 100) + '%');
+    budgetOut.textContent = budget;
+    timingOut.textContent = timing;
 
     if (!BOOKING_URL && cta) {
       const body = [
         'Hi Marina,',
         '',
-        'I’d like to book a call about launching on X.',
+        'I’d like to book a call about a launch on X.',
         '',
-        'Services I’m interested in:',
-        ...(picked.length ? picked.map(b => '- ' + nameOf(b)) : ['- Not sure yet']),
+        'What I need:',
+        ...(chosen.length ? chosen.map(b => '- ' + nameOf(b)) : ['- Not sure yet']),
         '',
-        'Influencer budget: ' + money(budget),
-        'Estimated total from your calculator: ' + money(services + budget),
+        'Influencer budget: ' + budget,
+        'Launch: ' + timing,
         '',
-        'Launch date:',
-        'What we’re launching:',
-        'Website:'
+        'Company / website:',
+        'What we’re launching:'
       ].join('\n');
       cta.href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent('Book a call: X launch') + '&body=' + encodeURIComponent(body);
     }
   };
 
-  form.addEventListener('input', render);
   form.addEventListener('change', render);
   form.addEventListener('submit', e => e.preventDefault());
   render();

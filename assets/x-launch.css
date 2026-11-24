@@ -81,13 +81,13 @@
 .xl-side-blue .xl-side-tag{color:var(--glow)}
 .xl-side-coral .xl-side-tag{color:var(--yellow)}
 .xl-side h3{font-size:25px;letter-spacing:-.8px;line-height:1.2;margin-top:16px}
-.xl-side ul{list-style:none;padding:0;margin-top:22px;display:flex;flex-direction:column;gap:16px}
+.xl-side ul{list-style:none;padding:0;margin-top:20px;display:flex;flex-direction:column;gap:16px}
 .xl-side li{font-size:14px;line-height:1.75;color:var(--soft);padding-left:22px;position:relative}
 .xl-side li:before{content:'↗';position:absolute;left:0;color:var(--coral)}
 .xl-side li strong{color:var(--text);font-weight:600}
 
 /* Steps */
-.xl-steps{list-style:none;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:18px;counter-reset:none}
+.xl-steps{list-style:none;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
 .xl-steps li{border-top:1px solid var(--edge);padding-top:20px;position:relative}
 .xl-steps li:before{content:'';position:absolute;top:-4px;left:0;width:7px;height:7px;border-radius:50%;background:var(--glow);box-shadow:0 0 12px var(--glow)}
 .xl-step-no{font-family:var(--mono);font-size:40px;color:var(--glow);letter-spacing:-2px;line-height:1;text-shadow:0 0 22px #4f6cff88}
@@ -164,13 +164,25 @@
 
 .x-launch .site-footer{border-top:1px solid var(--edge);background:#06070d}
 
+/* Checklist choices (no prices) */
+.xl-item{grid-template-columns:auto 1fr}
+.xl-pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.xl-pills label{cursor:pointer;position:relative}
+.xl-pills input{position:absolute;opacity:0;pointer-events:none}
+.xl-pills span{display:inline-block;padding:10px 16px;border:1px solid var(--edge);border-radius:40px;font-size:14px;color:var(--soft);transition:border-color .15s,background .15s,color .15s}
+.xl-pills label:hover span{border-color:#4a5384;color:var(--text)}
+.xl-pills input:checked+span{background:var(--blue);border-color:var(--glow);color:#fff;box-shadow:0 0 14px #4f6cff77}
+.xl-pills input:focus-visible+span{outline:3px solid var(--glow);outline-offset:3px}
+.xl-receipt-lines li>span:last-child{color:var(--blue);font-weight:700}
+.xl-receipt-cta{margin-top:20px}
+
 @keyframes xl-pulse{0%{box-shadow:0 0 0 0 #ff775999}70%{box-shadow:0 0 0 10px #ff775900}100%{box-shadow:0 0 0 0 #ff775900}}
 @keyframes xl-blink{50%{opacity:0}}
 @media(prefers-reduced-motion:reduce){.xl-pulse,.xl-caret{animation:none}}
 
 @media(max-width:1150px){
   .xl-hero{gap:40px}
-  .xl-steps{grid-template-columns:repeat(3,1fr);row-gap:34px}
+  .xl-steps{grid-template-columns:repeat(2,1fr);row-gap:34px}
   .xl-calc{grid-template-columns:1fr 340px;gap:28px}
 }
 @media(max-width:900px){
